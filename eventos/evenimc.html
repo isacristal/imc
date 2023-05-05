@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>IMC</title>
+</head>
+<body>
+    <header>
+        <h1>Calculadora de IMC</h1>
+        <p>Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela.</p>
+    </header>
+
+    <main>
+        <div id="tudin">
+            <div class="texto">
+                <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa. O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.</p>
+            </div>
+            <br><br>
+
+            <div class="informacoes">
+                <label>Altura:</label>
+                <input type="number" id="altura">
+                <br><br>
+                
+                <label>Peso:</label>
+                <input type="number" id="peso">
+                <br><br>
+                
+                <button id="calcular">Calcular</button>
+            </div>
+            
+            <div id="resultado"></div>
+        </div>
+
+            
+      
+    </main>
+    
+      
+    <script>
+        var conta = document.getElementById("calcular")
+        conta.addEventListener("click", function() {
+            var altura = document.getElementById("altura").value
+            var peso = document.getElementById("peso").value
+            var resultado = document.getElementById("resultado")
+            
+            
+            if(altura == "" || peso == ""){
+                resultado.innerHTML = "Por favor, preencha todos os campos."
+
+            }
+            
+            var imc = peso / (altura * 2)
+            if(imc < 18.5){
+                resultado.innerHTML = "Seu IMC é " + imc + "   você está abaixo do peso ideal"
+            }else if (imc < 24.9){
+                resultado.innerHTML = "Seu IMC é " + imc + "   você está abaixo do peso ideal"
+            }else if (imc < 29.9){
+                resultado.innerHTML = "Seu IMC é " + imc + "   você está sobrepeso I"
+            }else if (imc < 39.9){
+                resultado.innerHTML = "Seu IMC é " + imc + "   você está obeso II"
+            }else if (imc > 40){
+                resultado.innerHTML = "Seu IMC é " + imc + "   você está com obesidade grave"
+            }
+        })
+      </script>
+    
+</body>
+</html>
+
+
+
+    
