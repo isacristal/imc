@@ -55,21 +55,22 @@
             
             var imc = peso / (altura * altura)
             if(imc < 18.5){
-                resultado.innerHTML = "Seu IMC é " + imc + "   você está abaixo do peso ideal"
+                resultado.innerHTML = "Seu IMC é " + Math.ceil(imc) + "   você está abaixo do peso ideal"
             }else if (imc < 24.9){
-                resultado.innerHTML = "Seu IMC é " + imc + "   você está com o peso ideal"
+                resultado.innerHTML = "Seu IMC é " + Math.ceil(imc) + "   você está com o peso ideal"
             }else if (imc < 29.9){
-                resultado.innerHTML = "Seu IMC é " + imc + "   você está sobrepeso I"
+                resultado.innerHTML = "Seu IMC é " + Math.ceil(imc) + "   você está sobrepeso I"
             }else if (imc < 39.9){
-                resultado.innerHTML = "Seu IMC é " + imc + "   você está obeso II"
+                resultado.innerHTML = "Seu IMC é " + Math.ceil(imc) + "   você está obeso II"
             }else if (imc > 40){
-                resultado.innerHTML = "Seu IMC é " + imc + "   você está com obesidade grave"
+                resultado.innerHTML = "Seu IMC é " + Math.ceil(imc) + "   você está com obesidade grave"
             }
         })
       </script>
     
 </body>
 </html>
+
 
 
 
